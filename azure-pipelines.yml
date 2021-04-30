@@ -26,3 +26,11 @@ steps:
   displayName: 'run tests on Chrome'
   continueOnError: true
 
+- task: publishTestResults@2
+  displayName: 'Exibindo resultados dos testes'
+  inputs:
+    testResultsFiles: '**/junit-*.xml'
+    mergeTestResults: true
+    testRunTitle: 'Agilizei N2'
+  continueOnError: true
+
